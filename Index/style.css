@@ -1,0 +1,101 @@
+
+
+/*This is the main part of the 
+code */
+body {
+    font-family: 'Orbitron', sans-serif; /* Example of a futuristic font */
+    background-color: #000033; /* Very dark purple background */
+    color: #FF5BFF; /* Neon purple text */
+    margin: 20px;
+    padding: 20px;
+}
+
+h1, h2, p {
+    color: #FF5BFF; /* Neon purple text */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+button {
+    transition: background-color 0.3s ease;
+    background-color: #FF5BFF; /* Neon bright pink button */
+}
+
+button:hover {
+    background-color: #9D00FF; /* Neon purple hover effect */
+}
+
+
+/*The navigation part of the CSS that handles how the nav links look*/
+
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FF5BFF; /* Neon bright pink navigation links */
+    transition: color 0.3s ease;
+    -webkit-text-stroke: 1px #FF5BFF;
+    transition: text-stroke .3s;
+
+}
+
+nav ul li a:hover {
+    color: #9D00FF; /* Neon purple hover effect */
+    -webkit-text-stroke: 2px #FF5BFF;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FF5BFF;
+    transition: width .3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* this is for the button we are currently testing !!!*/
+.glow-effect {
+    animation: glow-animation 1s infinite alternate;
+  }
+  
+  @keyframes glow-animation {
+    from {
+      box-shadow: 0 0 10px 0px #0ff;
+    }
+    to {
+      box-shadow: 0 0 20px 5px #0ff;
+    }
+  }
+.animated-text {
+  animation: fadeIn  1s ease-in-out;
+}
+
+@keyframes fadeIn {
+   0% { opacity:  0; }
+   100% { opacity:  1; }
+}
+  
