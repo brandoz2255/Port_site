@@ -1,38 +1,88 @@
-"use strict";
+import React from 'react';
+import './style.css';
+import ReactDOM from 'react-dom';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _react = _interopRequireDefault(require("react"));
-require("./style.css");
-var _reactDom = _interopRequireDefault(require("react-dom"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function App() {
-  return /*#__PURE__*/_react["default"].createElement("div", {
-    className: "container"
-  }, /*#__PURE__*/_react["default"].createElement(Header, null), /*#__PURE__*/_react["default"].createElement(AboutMe, null), /*#__PURE__*/_react["default"].createElement(Skills, null), /*#__PURE__*/_react["default"].createElement(Projects, null), /*#__PURE__*/_react["default"].createElement(Footer, null));
+  return (
+    <div className="container">
+      <Header />
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <Footer />
+    </div>
+  );
 }
+
 function Header() {
-  return /*#__PURE__*/_react["default"].createElement("header", null, /*#__PURE__*/_react["default"].createElement("h1", null, "Dulce's Portfolio"), /*#__PURE__*/_react["default"].createElement("nav", null, /*#__PURE__*/_react["default"].createElement("ul", null, /*#__PURE__*/_react["default"].createElement("li", null, /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#aboutMe"
-  }, "About Me")), /*#__PURE__*/_react["default"].createElement("li", null, /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#skills"
-  }, "Skills")), /*#__PURE__*/_react["default"].createElement("li", null, /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#projects"
-  }, "Projects")))));
+  return (
+    <header>
+      <h1>Dulce's Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#aboutMe">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
 }
+
 function AboutMe() {
-  return /*#__PURE__*/_react["default"].createElement("section", {
-    id: "aboutMe"
-  }, /*#__PURE__*/_react["default"].createElement("h2", null, "About Me"), /*#__PURE__*/_react["default"].createElement("p", null, "Your about me content here"));
+  return (
+    <section id="aboutMe">
+      <h2>About Me</h2>
+      <p>Your about me content here</p>
+    </section>
+  );
 }
 
 // Render your App component to the DOM
-_reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(App, null), document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // Define Skills, Projects, and Footer components similarly
-var _default = exports["default"] = App;
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createThemeUnit } from '@arwes/theme';

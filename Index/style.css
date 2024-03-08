@@ -1,38 +1,47 @@
-
-
-/*This is the main part of the 
-code */
+/* Basic styles for the body and text */
 body {
-    font-family: 'Orbitron', sans-serif; /* Example of a futuristic font */
-    background-color: #000033; /* Very dark purple background */
-    color: #FF5BFF; /* Neon purple text */
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000033;
+    color: #FF5BFF;
     margin: 20px;
     padding: 20px;
 }
 
 h1, h2, p {
-    color: #FF5BFF; /* Neon purple text */
+    color: #FF5BFF;
 }
 
+/* Add a class for each section that needs the 8-inch distance */
+.section {
+    margin-bottom: 600px; /* 8 inches */
+}
+
+
+/* Basic flexbox layout for the container */
 .container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Basic button styles */
 button {
+    background-color: #FF5BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: #FF5BFF; /* Neon bright pink button */
 }
 
 button:hover {
-    background-color: #9D00FF; /* Neon purple hover effect */
+    background-color: #9D00FF;
 }
 
-
-/*The navigation part of the CSS that handles how the nav links look*/
-
-
+/* Basic navigation styles */
 nav {
     position: fixed;
     top: 0;
@@ -40,8 +49,11 @@ nav {
 }
 
 nav ul {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
 nav ul li {
@@ -51,51 +63,53 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FF5BFF; /* Neon bright pink navigation links */
+    color: #FF5BFF;
     transition: color 0.3s ease;
-    -webkit-text-stroke: 1px #FF5BFF;
-    transition: text-stroke .3s;
-
 }
 
 nav ul li a:hover {
-    color: #9D00FF; /* Neon purple hover effect */
-    -webkit-text-stroke: 2px #FF5BFF;
+    color: #9D00FF;
 }
 
-nav ul li a::after {
-    content: '';
+/* Side bar ccode */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Position the sidebar on the right */
+    width: 100px; /* Adjust as needed */
+    height: 100%;
+    background-color: #212f9f95; /* Cyberpunk blue */    padding: 20px;
+    box-sizing: border-box;
+    transition: width 0.5s ease; /* Smooth width transition */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.sidebar.expanded {
+    width: 400px; /* Expanded width */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
+.sidebar.expanded nav ul {
+    opacity: 1; /* Fully visible when expanded */
+}
+
+.sidebar nav ul li a {
     display: block;
-    width: 0;
-    height: 2px;
-    background: #FF5BFF;
-    transition: width .3s;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
 }
 
-nav ul li a:hover::after {
-    width: 100%;
-}
+.sidebar nav ul li a:hover {
+    background-color: #d600ff; /* Cyberpunk pink on hover */}
 
-
-/* this is for the button we are currently testing !!!*/
-.glow-effect {
-    animation: glow-animation 1s infinite alternate;
-  }
-  
-  @keyframes glow-animation {
-    from {
-      box-shadow: 0 0 10px 0px #0ff;
-    }
-    to {
-      box-shadow: 0 0 20px 5px #0ff;
-    }
-  }
-.animated-text {
-  animation: fadeIn  1s ease-in-out;
+.main-content {
+    margin-right: 220px; /* Adjust as needed to match the width of the expanded sidebar */
+    padding: 20px;
 }
-
-@keyframes fadeIn {
-   0% { opacity:  0; }
-   100% { opacity:  1; }
-}
-  

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="cube.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="sidebar.js"></script>
 </head>
-
 <body>
     <div class="container">
-
+        <!-- 
         <nav>
             <ul>
                 <li><a href="#aboutMe">About Me</a></li>
@@ -20,14 +19,21 @@
                 <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
-        
+         -->
+        <header class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
         <header>
             <h1>Dulce's Portfolio</h1>
         </header>
-        
         <section>
-            <section id="aboutMe">
-
+            <section id="aboutMe" class="section">
                 <div class="spinner">
                     <div></div>
                     <div></div>
@@ -35,72 +41,42 @@
                     <div></div>
                     <div></div>
                     <div></div>
-                  </div>
-
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate computer science and cybersecurity enthusiast on a journey of continuous learning. My fascination with technology began in 2018, and I've been diving deep into the realms of cybersecurity ever since.
-                Hello! I'm a passionate enthusiast in the realm of Computer Science and Cybersecurity. My journey began in 2018 when my brother introduced me to Hack The Box, sparking a fascination that has grown into a lifelong commitment. My engagement in the CyberPatriot Competition and National Cyber League during high school deepened this passion, particularly as I delved into CLI applications, crucial to both defensive and offensive security.
-
+                </div>
+                <h2>About Me</h2>
+                <p>Hello! I'm a passionate computer science and cybersecurity enthusiast on a journey of continuous learning. My fascination with technology began in 2018, and I've been diving deep into the realms of cybersecurity ever since. Hello! I'm a passionate enthusiast in the realm of Computer Science and Cybersecurity. My journey began in 2018 when my brother introduced me to Hack The Box, sparking a fascination that has grown into a lifelong commitment. My engagement in the CyberPatriot Competition and National Cyber League during high school deepened this passion, particularly as I delved into CLI applications, crucial to both defensive and offensive security.
                 My goal is to leverage my knowledge to build resilient defenses, fortify systems, and protect the integrity of our technological infrastructure. </p>
-                
-            <p>I strive to harmonize the art of programming with the intricacies of cybersecurity, finding joy in crafting elegant CLI applications and developing security tools. My profound curiosity about the inner workings of computers fuels my determination to contribute to the ever-expanding industry of technology.
-
+                <p>I strive to harmonize the art of programming with the intricacies of cybersecurity, finding joy in crafting elegant CLI applications and developing security tools. My profound curiosity about the inner workings of computers fuels my determination to contribute to the ever-expanding industry of technology.
                 I'm motivated by an unwavering commitment to continuous learning, constantly seeking ways to integrate the best cybersecurity practices into programming. My aim is not just to achieve these goals, but to innovate and contribute significantly to the dynamic technological landscape. As I craft my own tools, I'm driven by the goal of facilitating ease of use for others and leaving an indelible mark on the evolving landscape of technology.
-
                 I'm excited to embark on this journey, and I look forward to sharing my progress along the way. </p>
-
-            
-            <section id="skills">
-            <h2>Skills</h2>
-
-            <p>I am also bilingual fluent in both spanish and english</p>
-
-            <p>Python - General library as well as other libraries such as numpy, pygame, scrappy currently learning cool and unrealistic stuff to do with python and its libraries</p>
-
-            <p>C++ - The Standard Iostream library as well as other libaries [add more later] also know the cstdlib for C++</p>
-
-            <p>C - Only know the standard libary but understand the concepts of direct hardware communication have researched in the idea of malware creation in C</p>
-
-            <p>JS - Generally Node.js and the scripting side for web developement also dabbled in interacting with IOT devices with JS</p>
-
-            <p>Linux - I use Linux as my personal machine I currently use Eandeavour OS which is a distros based off of Arch linux So i am literate in navigating the CLI in Machines</p>
-            <p>[add more skills]</p>
-
-            <Button className="my-button" animate={true}>hit me</Button>
-
-
-            <section id="projects">
-            <h2>Projects</h2>
-
-            <p>[add more Porjects later ]</p>
-
-            <p>[Password C++ proj here later]</p>
-
-            <p>[Python proj that tests python to its limits here]</p>
-
-            <p>[JS proj here still figurint out what it is]</p>
-
-            <p>[will make that home lab one day!!]</p>
-            
-            <p>[That home netowork one]</p>
-
-            <p>[That gadget we want to make (blue team one and a red team one)]</p>
-
-
-            <!-- Add more content as needed -->
-
-        </section>
-
-        <!-- Add more sections for projects, skills, etc. -->
-
-        <footer>
-            <p>Excited to embark on this journey and share my progress along the way. ¡Vamos a aprender juntos!</p>
-        </footer>
-    </div>
-    <div id="root"></div>
-
-    <!-- Include the compiled JavaScript file -->
-    <script src="/home/dulc3/site/Index/React/compiled.js"></script>
-</body>
-
+            </section>
+            <section id="skills"class="section">
+                <h2>Skills</h2>
+                <p>I am also bilingual fluent in both spanish and english</p>
+                <p>Python - General library as well as other libraries such as numpy, pygame, scrappy currently learning cool and unrealistic stuff to do with python and its libraries</p>
+                <p>C++ - The Standard Iostream library as well as other libaries [add more later] also know the cstdlib for C++</p>
+                <p>C - Only know the standard libary but understand the concepts of direct hardware communication have researched in the idea of malware creation in C</p>
+                <p>JS - Generally Node.js and the scripting side for web developement also dabbled in interacting with IOT devices with JS</p>
+                <p>Linux - I use Linux as my personal machine I currently use Eandeavour OS which is a distros based off of Arch linux So i am literate in navigating the CLI in Machines</p>
+                <p>[add more skills]</p>
+                <Button className="my-button" animate={true}>hit me</Button>
+            </section>
+            <section id="projects"class="section">
+                <h2>Projects</h2>
+                <p>[add more Porjects later ]</p>
+                <p>[Password C++ proj here later]</p>
+                <p>[Python proj that tests python to its limits here]</p>
+                <p>[JS proj here still figurint out what it is]</p>
+                <p>[will make that home lab one day!!]</p>
+                <p>[That home netowork one]</p>
+                <p>[That gadget we want to make (blue team one and a red team one)]</p>
+            </section>
+            <!-- Add more sections for projects, skills, etc. -->
+            <footer>
+                <p>Excited to embark on this journey and share my progress along the way. ¡Vamos a aprender juntos!</p>
+            </footer>
+        </div>
+        <div id="root"></div>
+        <!-- <script src="/home/dulc3/site/Index/React/compiled.js"></script> -->
+        <script src="/home/dulc3/site/Index/React/index.js"></script>
+    </body>
 </html>
