@@ -93,6 +93,8 @@ nav ul li a:hover {
     padding: 0;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease; /* Smooth opacity transition */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
 }
 
 .sidebar.expanded nav ul {
