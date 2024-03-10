@@ -12,9 +12,36 @@ h1, h2, p {
 }
 
 /* Add a class for each section that needs the 8-inch distance */
-.section {
+ .section {
     margin-bottom: 600px; /* 8 inches */
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+    opacity: 0.1;  /*Start with the section hidden*/ 
+    position: relative;
+
+} 
+ 
+
+
+.section.visible {
+    opacity: 1; /* Fully visible when the class is added */
 }
+
+.section:hover {
+ background-color: #000033; /* Dark background */
+ opacity: 1; /* Slightly transparent */
+}
+
+.section-connector {
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
+    height: 2px; /* Adjust as needed */
+    background-color: #FF5BFF; /* Cyberpunk color */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
 
 
 /* Basic flexbox layout for the container */

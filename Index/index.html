@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce's Portfolio</title>
+    <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="cube.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="sidebar.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css"> -->
+    <script src="index.js"></script>
+
 </head>
 <body>
+
     <div class="container">
         <!-- 
         <nav>
@@ -23,9 +36,9 @@
         <header class="sidebar">
             <nav>
                 <ul>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#aboutMe"><i class="fas fa-user"></i> About Me</a></li>
+                    <li><a href="#skills"><i class="fas fa-glasses"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-microscope"></i> Projects</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,14 +47,15 @@
         </header>
         <section>
             <section id="aboutMe" class="section">
-                <div class="spinner">
+                <div class="section-connector"></div>
+                <!-- <div class="spinner">
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
-                </div>
+                </div> -->
                 <h2>About Me</h2>
                 <p>Hello! I'm a passionate computer science and cybersecurity enthusiast on a journey of continuous learning. My fascination with technology began in 2018, and I've been diving deep into the realms of cybersecurity ever since. Hello! I'm a passionate enthusiast in the realm of Computer Science and Cybersecurity. My journey began in 2018 when my brother introduced me to Hack The Box, sparking a fascination that has grown into a lifelong commitment. My engagement in the CyberPatriot Competition and National Cyber League during high school deepened this passion, particularly as I delved into CLI applications, crucial to both defensive and offensive security.
                 My goal is to leverage my knowledge to build resilient defenses, fortify systems, and protect the integrity of our technological infrastructure. </p>
@@ -50,6 +64,7 @@
                 I'm excited to embark on this journey, and I look forward to sharing my progress along the way. </p>
             </section>
             <section id="skills"class="section">
+                <div class="section-connector"></div>
                 <h2>Skills</h2>
                 <p>I am also bilingual fluent in both spanish and english</p>
                 <p>Python - General library as well as other libraries such as numpy, pygame, scrappy currently learning cool and unrealistic stuff to do with python and its libraries</p>
@@ -61,6 +76,7 @@
                 <Button className="my-button" animate={true}>hit me</Button>
             </section>
             <section id="projects"class="section">
+                <div class="section-connector"></div>
                 <h2>Projects</h2>
                 <p>[add more Porjects later ]</p>
                 <p>[Password C++ proj here later]</p>
@@ -69,6 +85,7 @@
                 <p>[will make that home lab one day!!]</p>
                 <p>[That home netowork one]</p>
                 <p>[That gadget we want to make (blue team one and a red team one)]</p>
+                <div class="section-connector"></div>
             </section>
             <!-- Add more sections for projects, skills, etc. -->
             <footer>
